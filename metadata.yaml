@@ -1,6 +1,6 @@
 name: astrbot_plugin_tool_use_cleaner # 插件唯一识别名，以 astrbot_plugin_ 前缀开头
 display_name: 工具调用清洗器 # 用于展示的名字，可以是方便人类阅读的名字（需要版本 >= v4.5.0，低版本不会报错，请放心填写）
-desc: 在本轮LLM请求前，将先前轮请求中LLM发出的工具调用请求以及调用返回从请求体中移除，减少 token 浪费。 # 插件简短描述
+desc: 在本轮LLM请求前，将先前轮请求中LLM发出的工具调用请求以及调用返回结果从请求体中移除，减少 token 浪费。 # 插件简短描述
 version: v1.0.0 # 插件版本号
 author: zz6zz666 # 作者
 repo: https://github.com/zz6zz666/astrbot_plugin_tool_use_cleaner # 插件的仓库地址

@@ -1,6 +1,6 @@
 # 工具调用清洗器 (astrbot_plugin_tool_use_cleaner)
 
-这是一个AstrBot的插件，用于在LLM请求前，将先前轮请求中LLM发出的工具调用请求以及调用返回从请求体中移除，减少token浪费，提高对话效率。
+这是一个AstrBot的插件，用于在LLM请求前，将先前轮请求中LLM发出的工具调用请求以及调用返回结果从请求体中移除，减少token浪费，提高对话效率。
 
 这是一个**过渡插件**，作者已向上游提交了将此功能作为 `enhancement` 整合进 AstrBot 框架的 [issue](https://github.com/AstrBotDevs/AstrBot/issues/3841)。若在未来的版本中被整合，将不再使用本插件。
 
