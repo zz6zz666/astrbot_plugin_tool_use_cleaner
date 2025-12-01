@@ -31,12 +31,15 @@ class ToolUseCleanerPlugin(Star):
                 if ctx.get("role") == "tool":
                     continue
                 
-                if enable_function_call_cleaner:
-                    # 处理assistant角色的消息
-                    if ctx.get("role") == "assistant":
-                        # 如果content为空且包含tool_calls，则跳过这条消息
-                        if not ctx.get("content") and "tool_calls" in ctx:
-                            continue
+                if enable_function_call_cleaner and ctx.get("role") == "assistant":
+                    if not ctx.get("content"):
+                        continue
+                    elif "tool_calls" in ctx:
+                        # 创建一个新的上下文对象，移除tool_calls字段但保留其他内容
+                        cleaned_ctx = ctx.copy()
+                        del cleaned_ctx["tool_calls"]
+                        cleaned_contexts.append(cleaned_ctx)
+                        continue
 
                 cleaned_contexts.append(ctx)
             
