@@ -1,0 +1,7 @@
+{
+  "enable_function_call_cleaner": {
+    "type": "bool",
+    "description": "清除 LLM 发出的工具调用请求（调用响应默认一定清除）",
+    "default": true
+  }
+}
