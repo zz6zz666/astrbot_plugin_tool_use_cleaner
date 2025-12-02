@@ -3,7 +3,7 @@ from astrbot.api.star import Context, Star, register
 from astrbot.api.provider import ProviderRequest
 from astrbot.api import logger, AstrBotConfig
 
-@register("tool_use_cleaner", "author", "在本轮LLM请求前，将先前轮请求中的工具调用和返回结果从请求体中移除，减少 token 浪费", "1.0.0")
+@register("tool_use_cleaner", "zz6zz666", "在本轮LLM请求前，将先前轮请求中的工具调用和返回结果从请求体中移除，减少 token 浪费", "1.0.0")
 class ToolUseCleanerPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
