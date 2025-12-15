@@ -1,7 +1,8 @@
 {
-  "enable_function_call_cleaner": {
-    "type": "bool",
-    "description": "同时清除 LLM 发出的工具调用请求（调用响应一定清除）",
-    "default": true
+  "tool_context_keep_rounds": {
+    "type": "int",
+    "description": "保留最近N轮的工具调用信息（0表示不保留，1表示保留当前轮，2表示保留最近2轮，以此类推）",
+    "default": 0,
+    "min": 0
   }
 }
